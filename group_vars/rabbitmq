@@ -1,0 +1,7 @@
+---
+rabbitmq_download_url: https://www.rabbitmq.com/releases/rabbitmq-server/v3.3.5/rabbitmq-server-generic-unix-3.3.5.tar.gz
+rabbitmq_install_path: "{{deploy_home}}"
+rabbitmq_archive: "{{rabbitmq_install_path}}/rabbitmq-server-generic-unix-3.3.5.tar.gz"
+rabbitmq_home: "{{rabbitmq_install_path}}/rabbitmq_server-3.3.5"
+rabbitmq_sample_cfg: "{{rabbitmq_home}}/etc/rabbitmq/rabbitmq.config.example"
+rabbitmq_cfg: "{{rabbitmq_home}}/etc/rabbitmq/rabbitmq.config"

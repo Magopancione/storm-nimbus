@@ -1,0 +1,14 @@
+---
+user_name: ubuntu
+user_group: sudo
+deploy_home: /home/ubuntu/deploy
+
+java_download_url: http://download.oracle.com/otn-pub/java/jdk/8u45-b14/jdk-8u45-linux-x64.tar.gz
+java_install_path: /usr/java
+java_archive: "{{java_install_path}}/jdk-8u45-linux-x64.tar.gz"
+java_name: "{{java_install_path}}/jdk1.8.0_45"
+java_symlink: "{{java_install_path}}/latest"
+java_default: "{{java_install_path}}/default"
+
+rabbitmq_port: 5672
+zookeeper_port: 2181

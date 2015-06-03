@@ -1,0 +1,44 @@
+---
+- name: Install erlang RedHat
+  yum: name=erlang state=latest
+  when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
+
+- name: Install erlang Ubuntu
+  apt: name=erlang state=latest
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: Create RabbitMQ install path
+  file: state=directory path={{rabbitmq_install_path}}
+
+- name: Download RabbitMQ
+  get_url: url={{rabbitmq_download_url}} dest={{rabbitmq_archive}}
+
+- name: Unpack RabbitMQ archive
+  unarchive: src={{rabbitmq_archive}} dest={{rabbitmq_install_path}} copy=no creates={{rabbitmq_home}}
+
+- name: Update default RabbitMQ conf file
+  lineinfile: dest={{rabbitmq_sample_cfg}} state=present backrefs=yes
+              regexp="^\s*%% {loopback_users, \[\]},$"
+              line="    {loopback_users, []}"
+
+- name: Set symlink for RabbitMQ cfg file
+  file: state=link path={{rabbitmq_cfg}} src={{rabbitmq_sample_cfg}}
+
+- name: Fix ownership
+  file: state=directory path={{airavata_home}} owner={{user_name}} group={{user_group}} recurse=yes
+
+- name: Start RabbitMQ
+  environment:
+    JAVA_HOME: "{{java_default}}"
+  sudo: yes
+  sudo_user: "{{user_name}}"
+  command: "{{rabbitmq_home}}/sbin/rabbitmqctl stop"
+  ignore_errors: True
+
+- name: Start RabbitMQ
+  environment:
+    JAVA_HOME: "{{java_default}}"
+  sudo: yes
+  sudo_user: "{{user_name}}"
+  command: "{{rabbitmq_home}}/sbin/rabbitmq-server -detached"
+  ignore_errors: True
