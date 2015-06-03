@@ -12,3 +12,5 @@ java_default: "{{java_install_path}}/default"
 
 rabbitmq_port: 5672
 zookeeper_port: 2181
+
+supervisor_dir: "{{deploy_home}}/supervisor"

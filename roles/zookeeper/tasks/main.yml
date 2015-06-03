@@ -15,10 +15,11 @@
   file: state=directory path={{deploy_home}} owner={{user_name}} group={{user_group}} recurse=yes
 
 - name: Add ZooKeeper supervisor file
+  template: src=zoo.conf dest="{{zoo_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
 
-- name: Start ZooKeeper
-  environment:
-    JAVA_HOME: "{{java_default}}"
-  sudo: yes
-  sudo_user: "{{user_name}}"
-  command: "{{zookeeper_home}}/bin/zkServer.sh start"
+- name: Start the ZooKeeper service
+  supervisorctl: >
+    name=zookeeper
+    supervisorctl_path={{ supervisor_ctl }}
+    config={{ zoo_supervisor_file }}
+    state=started
