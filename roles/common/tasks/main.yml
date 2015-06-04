@@ -36,4 +36,4 @@
 
 - name: Install Supervisord
   sudo: yes
-  easy_install: name=supervisor
+  apt: name=supervisor state=latest
