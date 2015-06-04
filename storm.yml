@@ -7,3 +7,7 @@
   remote_user: "{{user_name}}"
   roles:
   - nimbus
+- hosts: supervisor
+  remote_user: "{{user_name}}"
+  roles:
+  - supervisor
