@@ -14,7 +14,7 @@
 
 - name: Add the entries to hosts file
   sudo: yes
-  command: cat {{deploy_home}}/hosts >> /etc/hosts
+  command: "cat {{deploy_home}}/hosts >> /etc/hosts"
 
 - name: Create supervisor conf path
   file: state=directory path={{supervisor_dir}} owner={{user_name}} group={{user_group}}
