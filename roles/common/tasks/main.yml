@@ -27,6 +27,10 @@
 - name: Set symlink for default Java
   file: state=link path={{java_default}} src={{java_symlink}}
 
+- name: Install python setup tools
+  sudo: yes
+  apt: name=python-setuptools state=latest
+
 - name: Install Supervisord
   sudo: yes
   easy_install: name=supervisor
