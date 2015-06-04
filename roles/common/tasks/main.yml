@@ -8,7 +8,7 @@
 
 - name: Add the entries to hosts file
   sudo: yes
-  command: cat files >> /etc/hosts
+  command: cat hosts >> /etc/hosts
 
 - name: Install git
   apt: name=git state=latest
