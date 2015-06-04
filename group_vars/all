@@ -14,3 +14,4 @@ rabbitmq_port: 5672
 zookeeper_port: 2181
 
 supervisor_dir: "{{deploy_home}}/supervisor"
+supervisor_ctl: /usr/local/bin/supervisorctl
