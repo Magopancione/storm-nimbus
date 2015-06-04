@@ -21,5 +21,5 @@
   supervisorctl: >
     name=nimbus
     supervisorctl_path={{ supervisor_ctl }}
-    config={{ storm_supervisor_supervisor_file }}
-    state=started
+    config={{ supervisor_file }}
+    state=restarted
