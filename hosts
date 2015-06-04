@@ -1,18 +1,20 @@
 [nz]
-localhost
+10.23.2.113
 
 [supervisor]
-10.23.1.12
+10.23.2.114
+10.23.2.117
+10.23.2.118
+10.23.2.119
 
 [rabbitmq]
 
-
 [nz:vars]
-nimbus_host=10.23.0.61
-zookeeper_host=10.23.0.61
+nimbus_host=10.23.2.113
+zookeeper_host=10.23.2.113
 rabbitmq_host=10.23.0.61
 
 [supervisor:vars]
-nimbus_host=10.23.0.61
-zookeeper_host=10.23.0.61
+nimbus_host=10.23.2.113
+zookeeper_host=10.23.2.113
 rabbitmq_host=10.23.0.61
