@@ -3,11 +3,11 @@
   yum: name=libselinux-python state=latest
   when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux'
 
-- name: Create airavata user
-  user: name=airavata comment="Airavata User" shell=/bin/bash
-
 - name: Install unzip
   apt: name=unzip state=latest
+
+- name: Install git
+  apt: name=git state=latest
 
 - name: Create Java install path
   file: state=directory path={{java_install_path}} owner={{user_name}} group={{user_group}}
