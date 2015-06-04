@@ -8,11 +8,11 @@ localhost
 
 
 [nz:vars]
-nimbus_host=localhost
-zookeeper_host=localhost
-rabbitmq_host=localhost
+nimbus_host=10.23.0.61
+zookeeper_host=10.23.0.61
+rabbitmq_host=10.23.0.61
 
 [supervisor:vars]
-nimbus_host=localhost
-zookeeper_host=localhost
-rabbitmq_host=localhost
+nimbus_host=10.23.0.61
+zookeeper_host=10.23.0.61
+rabbitmq_host=10.23.0.61
