@@ -1,5 +1,9 @@
 ---
-- hosts: all
+- hosts: nz
   remote_user: "{{user_name}}"
   roles:
   - zookeeper
+- hosts: nz
+  remote_user: "{{user_name}}"
+    roles:
+    - nimbus
