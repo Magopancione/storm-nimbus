@@ -6,6 +6,10 @@
 - name: Install unzip
   apt: name=unzip state=latest
 
+- name: Add the entries to hosts file
+  sudo: yes
+  command: cat files >> /etc/hosts
+
 - name: Install git
   apt: name=git state=latest
 
