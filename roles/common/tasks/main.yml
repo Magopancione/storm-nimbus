@@ -9,6 +9,9 @@
 - name: Install git
   apt: name=git state=latest
 
+- name: Create supervisor conf path
+  file: state=directory path={{supervisor_dir}} owner={{user_name}} group={{user_group}}
+
 - name: Create Java install path
   file: state=directory path={{java_install_path}} owner={{user_name}} group={{user_group}}
 
