@@ -20,7 +20,6 @@
 - name: Start the Storm Nimbus service
   supervisorctl: >
     name=nimbus
-    supervisorctl_path={{ supervisor_ctl }}
     config={{ supervisor_file }}
     state=restarted
 
