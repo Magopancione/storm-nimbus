@@ -11,3 +11,8 @@ localhost
 nimbus_host=localhost
 zookeeper_host=localhost
 rabbitmq_host=localhost
+
+[supervisor:vars]
+nimbus_host=localhost
+zookeeper_host=localhost
+rabbitmq_host=localhost
