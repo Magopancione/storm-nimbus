@@ -5,5 +5,5 @@
   - zookeeper
 - hosts: nz
   remote_user: "{{user_name}}"
-    roles:
-    - nimbus
+  roles:
+  - nimbus
