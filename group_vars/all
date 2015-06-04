@@ -25,3 +25,18 @@ storm_cfg: "{{storm_home}}/conf/storm.yaml"
 storm_nimbus_supervisor_file: "{{supervisor_dir}}/nimbus.cfg"
 storm_supervisor_supervisor_file: "{{supervisor_dir}}/supervisor.cfg"
 storm_ui_supervisor_file: "{{supervisor_dir}}/ui.cfg"
+
+zookeeper_download_url: http://apache.arvixe.com/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz
+zookeeper_install_path: "{{deploy_home}}"
+zookeeper_archive: "{{zookeeper_install_path}}/zookeeper-3.4.6.tar.gz"
+zookeeper_home: "{{zookeeper_install_path}}/zookeeper-3.4.6"
+zookeeper_sample_cfg: "{{zookeeper_home}}/conf/zoo_sample.cfg"
+zookeeper_cfg: "{{zookeeper_home}}/conf/zoo.cfg"
+zoo_supervisor_file: "/etc/supervisor/conf.d/zoo.conf"
+
+rabbitmq_download_url: https://www.rabbitmq.com/releases/rabbitmq-server/v3.3.5/rabbitmq-server-generic-unix-3.3.5.tar.gz
+rabbitmq_install_path: "{{deploy_home}}"
+rabbitmq_archive: "{{rabbitmq_install_path}}/rabbitmq-server-generic-unix-3.3.5.tar.gz"
+rabbitmq_home: "{{rabbitmq_install_path}}/rabbitmq_server-3.3.5"
+rabbitmq_sample_cfg: "{{rabbitmq_home}}/etc/rabbitmq/rabbitmq.config.example"
+rabbitmq_cfg: "{{rabbitmq_home}}/etc/rabbitmq/rabbitmq.config"
