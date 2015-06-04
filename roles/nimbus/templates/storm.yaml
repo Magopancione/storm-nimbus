@@ -1,0 +1,16 @@
+storm.zookeeper.servers:
+     - "{{zookeeper_host}}"
+
+nimbus.host: "{{nimbus_host}}"
+
+supervisor.slots.ports:
+    - 6700
+    - 6701
+    - 6702
+    - 6703
+
+storm.local.dir: "/home/ubuntu/deploy/storm/storm-local"
+
+worker.childopts: "-Xms1536m -Xmx1536m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -XX:+CMSParallelRemarkEnabled -XX:NewSize=800m -XX:MaxNewSize=800m -XX:MaxTenuringThreshold=1 -XX:SurvivorRatio=6"
+supervisor.childopts: "-Xmx512m"
+nimbus.childopts: "-Xmx1024m"

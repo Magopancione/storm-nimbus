@@ -1,0 +1,11 @@
+---
+storm_download_url: http://mirror.olnevhost.net/pub/apache/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz
+storm_install_path: "{{deploy_home}}"
+storm_archive: "{{storm_install_path}}/apache-storm-0.9.4.tar.gz"
+storm_home: "{{storm_install_path}}/apache-storm-0.9.4"
+storm_cfg: "{{storm_home}}/conf/storm.yaml"
+storm_nimbus_supervisor_file: "{{supervisor_dir}}/nimbus.cfg"
+storm_supervisor_supervisor_file: "{{supervisor_dir}}/supervisor.cfg"
+storm_ui_supervisor_file: "{{supervisor_dir}}/ui.cfg"
+
+

@@ -1,0 +1,25 @@
+---
+- name: Create Storm install path
+  file: state=directory path={{storm_install_path}}
+
+- name: Download Storm
+  get_url: url={{storm_download_url}} dest={{storm_archive}}
+
+- name: Unpack Storm archive
+  unarchive: src={{storm_archive}} dest={{storm_install_path}} copy=no creates={{storm_home}}
+
+- name: Add Supervisor conf file
+  template: src=storm.yaml dest="{{storm_cfg}}" owner="{{user_name}}" group={{user_group}}
+
+- name: Fix ownership
+  file: state=directory path={{deploy_home}} owner={{user_name}} group={{user_group}} recurse=yes
+
+- name: Add Storm Supervisor supervisor file
+  template: src=supervisor.conf dest="{{storm_supervisor_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
+
+- name: Start the Storm Nimbus service
+  supervisorctl: >
+    name=nimbus
+    supervisorctl_path={{ supervisor_ctl }}
+    config={{ storm_supervisor_supervisor_file }}
+    state=started

@@ -5,3 +5,9 @@ localhost
 
 
 [rabbitmq]
+
+
+[storm:vars]
+nimbus_host=localhost
+zookeeper_host=localhost
+rabbitmq_host=localhost
