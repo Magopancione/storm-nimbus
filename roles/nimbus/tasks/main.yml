@@ -14,7 +14,7 @@
 - name: Fix ownership
   file: state=directory path={{deploy_home}} owner={{user_name}} group={{user_group}} recurse=yes
 
-- name: Add ZooKeeper supervisor file
+- name: Add Nimbus supervisor file
   template: src=nimbus.conf dest="{{storm_nimbus_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
 
 - name: Start the Storm Nimbus service
@@ -24,3 +24,12 @@
     config={{ supervisor_file }}
     state=restarted
 
+- name: Add Storm UI supervisor file
+  template: src=ui.conf dest="{{storm_ui_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
+
+- name: Start the Storm Nimbus service
+  supervisorctl: >
+    name=ui
+    supervisorctl_path={{ supervisor_ctl }}
+    config={{ supervisor_file }}
+    state=restarted
