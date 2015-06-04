@@ -15,3 +15,4 @@ zookeeper_port: 2181
 
 supervisor_dir: "{{deploy_home}}/supervisor"
 supervisor_ctl: /usr/local/bin/supervisorctl
+supervisor_file: /etc/supervisor/supervisord.conf

@@ -21,5 +21,5 @@
   supervisorctl: >
     name=zookeeper
     supervisorctl_path={{ supervisor_ctl }}
-    config={{ zoo_supervisor_file }}
+    config={{ supervisor_file }}
     state=started
