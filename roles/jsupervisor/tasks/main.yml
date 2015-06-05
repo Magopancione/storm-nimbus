@@ -18,6 +18,7 @@
   template: src=jsupervisor.conf dest="{{jstorm_supervisor_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
 
 - name: Start the JStorm Nimbus service
+  sudo: yes
   supervisorctl: >
     name=jnimbus
     config={{ supervisor_file }}
