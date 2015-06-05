@@ -22,4 +22,4 @@
   supervisorctl: >
     name=jsupervisor
     config={{ supervisor_file }}
-    state=started
+    state=restarted
