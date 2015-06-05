@@ -1,0 +1,24 @@
+---
+- name: Create JStorm install path
+  file: state=directory path={{jstorm_install_path}}
+
+- name: Download JStorm
+  get_url: url={{jstorm_download_url}} dest={{jstorm_archive}}
+
+- name: Unpack JStorm archive
+  unarchive: src={{jstorm_archive}} dest={{jstorm_install_path}} copy=no creates={{jstorm_home}}
+
+- name: Add JStorm Supervisor conf file
+  template: src=storm.yaml dest="{{jstorm_cfg}}" owner="{{user_name}}" group={{user_group}}
+
+- name: Fix ownership
+  file: state=directory path={{deploy_home}} owner={{user_name}} group={{user_group}} recurse=yes
+
+- name: Add JStorm Supervisor supervisor file
+  template: src=jsupervisor.conf dest="{{jstorm_supervisor_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
+
+- name: Start the JStorm Nimbus service
+  supervisorctl: >
+    name=jnimbus
+    config={{ supervisor_file }}
+    state=restarted

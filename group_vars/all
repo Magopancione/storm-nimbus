@@ -26,6 +26,15 @@ storm_nimbus_supervisor_file: "/etc/supervisor/conf.d/nimbus.conf"
 storm_supervisor_supervisor_file: "/etc/supervisor/conf.d/supervisor.conf"
 storm_ui_supervisor_file: "/etc/supervisor/conf.d/ui.conf"
 
+jstorm_download_url: http://mirror.olnevhost.net/pub/apache/storm/apache-storm-0.9.4/apache-storm-0.9.4.tar.gz
+jstorm_install_path: "{{deploy_home}}"
+jstorm_archive: "{{storm_install_path}}/apache-storm-0.9.4.tar.gz"
+jstorm_home: "{{storm_install_path}}/apache-storm-0.9.4"
+jstorm_cfg: "{{storm_home}}/conf/storm.yaml"
+jstorm_nimbus_supervisor_file: "/etc/supervisor/conf.d/jnimbus.conf"
+jstorm_supervisor_supervisor_file: "/etc/supervisor/conf.d/jsupervisor.conf"
+jstorm_ui_supervisor_file: "/etc/supervisor/conf.d/jui.conf"
+
 zookeeper_download_url: http://apache.arvixe.com/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz
 zookeeper_install_path: "{{deploy_home}}"
 zookeeper_archive: "{{zookeeper_install_path}}/zookeeper-3.4.6.tar.gz"
