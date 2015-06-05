@@ -30,4 +30,4 @@
   supervisorctl: >
     name=jui
     config={{ supervisor_file }}
-    state=restarted
+    state=started

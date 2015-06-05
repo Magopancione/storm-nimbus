@@ -21,4 +21,4 @@
   supervisorctl: >
     name=jnimbus
     config={{ supervisor_file }}
-    state=restarted
+    state=started
