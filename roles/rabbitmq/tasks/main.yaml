@@ -24,9 +24,6 @@
 - name: Set symlink for RabbitMQ cfg file
   file: state=link path={{rabbitmq_cfg}} src={{rabbitmq_sample_cfg}}
 
-- name: Fix ownership
-  file: state=directory path={{airavata_home}} owner={{user_name}} group={{user_group}} recurse=yes
-
 - name: Start RabbitMQ
   environment:
     JAVA_HOME: "{{java_default}}"
