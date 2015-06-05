@@ -25,9 +25,3 @@
 
 - name: Add JStorm UI supervisor file
   template: src=jui.conf dest="{{jstorm_ui_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
-
-- name: Start the JStorm Nimbus service
-  supervisorctl: >
-    name=jui
-    config={{ supervisor_file }}
-    state=started
