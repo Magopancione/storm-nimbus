@@ -23,5 +23,3 @@
     config={{ supervisor_file }}
     state=restarted
 
-- name: Add JStorm UI supervisor file
-  template: src=jui.conf dest="{{jstorm_ui_supervisor_file}}" owner="{{user_name}}" group={{user_group}}
