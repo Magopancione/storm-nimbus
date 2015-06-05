@@ -1,13 +1,13 @@
 ---
-- hosts: nz
+- hosts: jnz
   remote_user: "{{user_name}}"
   roles:
   - zookeeper
-- hosts: nz
+- hosts: jnz
   remote_user: "{{user_name}}"
   roles:
   - jnimbus
-- hosts: supervisor
+- hosts: jsupervisor
   remote_user: "{{user_name}}"
   roles:
   - jsupervisor
