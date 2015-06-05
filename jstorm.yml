@@ -11,3 +11,7 @@
   remote_user: "{{user_name}}"
   roles:
   - jsupervisor
+- hosts: rabbitmq
+  remote_user: "{{user_name}}"
+  roles:
+  - rabbitmq
