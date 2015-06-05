@@ -20,6 +20,6 @@
 - name: Start the JStorm Nimbus service
   sudo: yes
   supervisorctl: >
-    name=jnimbus
+    name=jsupervisor
     config={{ supervisor_file }}
     state=started
