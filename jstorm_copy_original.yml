@@ -1,0 +1,14 @@
+---
+- hosts: jnz
+  remote_user: "{{user_name}}"
+  vars:
+    jar_file: "{{jstorm_original_server_jar}}"
+  roles:
+    - jstormcopy
+
+- hosts: jsupervisor
+  remote_user: "{{user_name}}"
+  vars:
+    jar_file: "{{jstorm_original_server_jar}}"
+  roles:
+    - jstormcopy
