@@ -4,7 +4,7 @@
   command: service supervisor stop
 
 - name: copy the jar file
-  copy: src="{{jar_file}}" dest="{{jstorm_deployed_server_jar_path}}"
+  copy: src={{jar_file}} dest={{jstorm_deployed_server_jar_path}}
 
 - name: Stop the services
   sudo: yes
