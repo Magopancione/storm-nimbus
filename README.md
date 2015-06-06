@@ -1,0 +1,1 @@
+ansible-playbook -s -k -u ubuntu -i hosts jstorm_copy_modified.yml
