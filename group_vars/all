@@ -26,7 +26,7 @@ storm_nimbus_supervisor_file: "/etc/supervisor/conf.d/nimbus.conf"
 storm_supervisor_supervisor_file: "/etc/supervisor/conf.d/supervisor.conf"
 storm_ui_supervisor_file: "/etc/supervisor/conf.d/ui.conf"
 
-jstorm_download_url: https://iu.box.com/shared/static/hti0dsa10admzdk8ev4nl92cyqf62bf2.zip
+jstorm_local_url: /home/ubuntu/projects/jstorm-bcast9/target/aloha-tgz.zip
 jstorm_install_path: "{{deploy_home}}"
 jstorm_archive: "{{jstorm_install_path}}/aloha-tgz.zip"
 jstorm_home: "{{jstorm_install_path}}/jstorm-0.9.6.3"

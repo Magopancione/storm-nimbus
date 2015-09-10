@@ -3,7 +3,7 @@
   file: state=directory path={{jstorm_install_path}}
 
 - name: Download JStorm
-  get_url: url={{jstorm_download_url}} dest={{jstorm_archive}}
+  copy: src={{jstorm_local_url}} dest={{jstorm_archive}}
 
 - name: Unpack JStorm archive
   unarchive: src={{jstorm_archive}} dest={{jstorm_install_path}} copy=no creates={{jstorm_home}}
