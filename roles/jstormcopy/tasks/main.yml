@@ -10,7 +10,7 @@
   template: src=storm.yaml dest="{{jstorm_cfg}}" owner="{{user_name}}" group={{user_group}}
 
 - name: Copy logback file
-  template: src=jstorm.logback.xml dest="{{jstorm_cfg}}" owner="{{user_name}}" group={{user_group}}
+  template: src=jstorm.logback.xml dest="{{jstorm_log}}" owner="{{user_name}}" group={{user_group}}
 
 - name: Stop the services
   sudo: yes
