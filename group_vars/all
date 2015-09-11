@@ -35,10 +35,10 @@ jstorm_nimbus_supervisor_file: "/etc/supervisor/conf.d/jnimbus.conf"
 jstorm_supervisor_supervisor_file: "/etc/supervisor/conf.d/jsupervisor.conf"
 jstorm_ui_supervisor_file: "/etc/supervisor/conf.d/jui.conf"
 
-jstorm_modified_local_path: /home/ubuntu/projects/jstorm
+jstorm_modified_local_path: /home/ubuntu/projects/jstorm-bcast9
 jstorm_modifiled_server_jar: "{{jstorm_modified_local_path}}/jstorm-server/target/jstorm-server-0.9.6.3.jar"
 
-jstorm_original_local_path: /home/ubuntu/projects/jstorm-original
+jstorm_original_local_path: /home/ubuntu/projects/jstorm-9
 jstorm_original_server_jar: "{{jstorm_original_local_path}}/jstorm-server/target/jstorm-server-0.9.6.3.jar"
 
 jstorm_deployed_server_jar_path: "{{jstorm_home}}/jstorm-server-0.9.6.3.jar"
