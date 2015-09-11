@@ -3,6 +3,7 @@
   remote_user: "{{user_name}}"
   vars:
     jar_file: "{{jstorm_original_server_jar}}"
+    client_jar_file: "{{jstorm_original_client_jar}}"
   roles:
     - jstormcopy
 
@@ -10,5 +11,6 @@
   remote_user: "{{user_name}}"
   vars:
     jar_file: "{{jstorm_original_server_jar}}"
+    client_jar_file: "{{jstorm_original_client_jar}}"
   roles:
     - jstormcopy

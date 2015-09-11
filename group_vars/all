@@ -38,11 +38,14 @@ jstorm_ui_supervisor_file: "/etc/supervisor/conf.d/jui.conf"
 
 jstorm_modified_local_path: /home/ubuntu/projects/jstorm-bcast9
 jstorm_modifiled_server_jar: "{{jstorm_modified_local_path}}/jstorm-server/target/jstorm-server-0.9.6.3.jar"
+jstorm_modifiled_client_jar: "{{jstorm_modified_local_path}}/jstorm-server/target/jstorm-client-0.9.6.3.jar"
 
 jstorm_original_local_path: /home/ubuntu/projects/jstorm-9
 jstorm_original_server_jar: "{{jstorm_original_local_path}}/jstorm-server/target/jstorm-server-0.9.6.3.jar"
+jstorm_original_client_jar: "{{jstorm_original_local_path}}/jstorm-server/target/jstorm-client-0.9.6.3.jar"
 
 jstorm_deployed_server_jar_path: "{{jstorm_home}}/jstorm-server-0.9.6.3.jar"
+jstorm_deployed_client_jar_path: "{{jstorm_home}}/jstorm-client-0.9.6.3.jar"
 
 zookeeper_download_url: http://apache.arvixe.com/zookeeper/zookeeper-3.4.6/zookeeper-3.4.6.tar.gz
 zookeeper_install_path: "{{deploy_home}}"
