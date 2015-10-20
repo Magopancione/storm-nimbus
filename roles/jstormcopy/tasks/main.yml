@@ -6,9 +6,6 @@
 - name: copy the server jar file
   copy: src={{jar_file}} dest={{jstorm_deployed_server_jar_path}}
 
-- name: copy the client jar file
-  copy: src={{client_jar_file}} dest={{jstorm_deployed_client_jar_path}}
-
 - name: Copy conf file
   template: src=storm.yaml dest="{{jstorm_cfg}}" owner="{{user_name}}" group={{user_group}}
 
