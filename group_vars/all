@@ -26,10 +26,10 @@ storm_nimbus_supervisor_file: "/etc/supervisor/conf.d/nimbus.conf"
 storm_supervisor_supervisor_file: "/etc/supervisor/conf.d/supervisor.conf"
 storm_ui_supervisor_file: "/etc/supervisor/conf.d/ui.conf"
 
-jstorm_local_url: /home/ubuntu/projects/jstorm-bcast9/target/aloha-tgz.zip
+jstorm_local_url: /home/ubuntu/projects/jstorm-original/target/aloha-tgz.zip
 jstorm_install_path: "{{deploy_home}}"
 jstorm_archive: "{{jstorm_install_path}}/aloha-tgz.zip"
-jstorm_home: "{{jstorm_install_path}}/jstorm-0.9.6.3"
+jstorm_home: "{{jstorm_install_path}}/jstorm-2.0.4-SNAPSHOT"
 jstorm_cfg: "{{jstorm_home}}/conf/storm.yaml"
 jstorm_log: "{{jstorm_home}}/conf/jstorm.logback.xml"
 jstorm_nimbus_supervisor_file: "/etc/supervisor/conf.d/jnimbus.conf"
